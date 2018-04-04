@@ -45,30 +45,17 @@ var arrayTasks = {
 			}
 		}
 		return posArr;
-
-
-		// var posArr = [];
-		// var newArr = arr;
-		// for (element of newArr){
-		// 	if (element === itemToFind){
-		// 		posArr.push(newArr.indexOf(element));
-		// 		newArr.splice()
-		// 	};
-		// };
-		// return posArr;
-		//
-		// return this.accounts.find(function(account){
-		// 		return account.name === name;
-		// });
-
-
-
-
 	},
 
-	// sumOfAllEvenNumbersSquared: function (arr) {
+	sumOfAllEvenNumbersSquared: function (arr) {
+		var evenArr = arr.filter(number => number %2 === 0)
+		var squareArr = this.square(evenArr);
+		return this.sum(squareArr);
 
-	// }
+
+
+		// return number % 2 === 0;
+	}
 
 }
 
