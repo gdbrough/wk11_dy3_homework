@@ -39,9 +39,9 @@ var arrayTasks = {
 
 	findIndexesOf: function (arr, itemToFind) {
 		var posArr = [];
-		for (let index = 0; index < arr.length; index++){
+		for (index in arr){
 			if (arr[index] === itemToFind){
-				posArr.push(index);
+				posArr.push(parseInt(index));
 			}
 		}
 		return posArr;
@@ -51,12 +51,7 @@ var arrayTasks = {
 		var evenArr = arr.filter(number => number %2 === 0)
 		var squareArr = this.square(evenArr);
 		return this.sum(squareArr);
-
-
-
-		// return number % 2 === 0;
 	}
-
 }
 
 module.exports = arrayTasks
